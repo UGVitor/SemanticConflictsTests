@@ -7,6 +7,7 @@ public class ContaBancaria {
         saldo = 0;
         aplicarTransacoes(transacoes);
         aplicarTaxaManutencao();
+    	aplicarCashback(); 
 
     }
 
@@ -23,6 +24,12 @@ public class ContaBancaria {
     public double getSaldo() {
         return saldo;
     }
+
+    private void aplicarCashback() {
+    if (saldo > 1000) {
+        saldo *= 1.02; // 2% de cashback para saldos altos
+    }
+}
 
 }
 
