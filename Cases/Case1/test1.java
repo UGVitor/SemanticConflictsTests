@@ -1,4 +1,6 @@
-#Left
+#Right
 public void aumentarContador() {
-    	contador += 2; 
+    if (contador < 10) {
+       contador++; 
+	    } 
 }
