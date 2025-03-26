@@ -6,6 +6,7 @@ public class ProcessadorPedidos {
     public void processar(Item[] itens) {
         totalPedido = 0;
         calcularSubtotal(itens);
+	aplicarDesconto();
         aplicarImpostos();
 	calcularFrete();
     }
@@ -20,11 +21,18 @@ public class ProcessadorPedidos {
         totalPedido *= 1.1; // Acrescenta 10% de impostos
     }
 
+    private void calcularFrete() {
+        totalPedido += 15.0; // Adiciona valor fixo de frete
+}
     public double getTotal() {
         return totalPedido;
     }
-    private void calcularFrete() {
-        totalPedido += 15.0; // Adiciona valor fixo de frete
+
+
+    private void aplicarDesconto(){
+    if (totalPedido > 100){
+	totalPedido *= 0.9
+	}
 }
 
 }
