@@ -1,4 +1,4 @@
-#Inicial Version
+#Left
 public void aumentarContador() {
-	contador++;
+    	contador += 2; 
 }
