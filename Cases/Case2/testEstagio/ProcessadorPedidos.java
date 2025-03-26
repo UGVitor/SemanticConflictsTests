@@ -7,6 +7,7 @@ public class ProcessadorPedidos {
         totalPedido = 0;
         calcularSubtotal(itens);
         aplicarImpostos();
+	calcularFrete();
     }
 
     private void calcularSubtotal(Item[] itens) {
@@ -22,4 +23,8 @@ public class ProcessadorPedidos {
     public double getTotal() {
         return totalPedido;
     }
+    private void calcularFrete() {
+        totalPedido += 15.0; // Adiciona valor fixo de frete
+}
+
 }
