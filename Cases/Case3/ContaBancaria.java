@@ -6,6 +6,7 @@ public class ContaBancaria {
     public void processarTransacoes(double[] transacoes) {
         saldo = 0;
         aplicarTransacoes(transacoes);
+    	aplicarBonusFidelidade();
         aplicarTaxaManutencao();
     	aplicarCashback(); 
 
@@ -19,6 +20,10 @@ public class ContaBancaria {
 
     protected void aplicarTaxaManutencao() {
         saldo -= 10.0;
+    }
+
+    private void aplicarBonusFidelidade() {
+    	saldo += 50.0; // Bônus fixo para clientes fiéis
     }
 
     public double getSaldo() {
