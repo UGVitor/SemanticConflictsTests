@@ -6,6 +6,7 @@ public class ProcessadorPedidos {
     public void processar(Item[] itens) {
         totalPedido = 0;
         calcularSubtotal(itens);
+	aplicarDesconto();
         aplicarImpostos();
     }
 
@@ -22,4 +23,9 @@ public class ProcessadorPedidos {
     public double getTotal() {
         return totalPedido;
     }
+    private void aplicarDesconto(){
+    if (totalPedido > 100){
+	totalPedido *= 0.9
+	}
+}
 }
