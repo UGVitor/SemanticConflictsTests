@@ -14,7 +14,11 @@ public class GerenciadorTarefas {
             status = "Em Andamento";
         }
     }
-
+    public void verificarBloqueios() {
+        if (progresso < 30) {
+            status = "Bloqueado";
+        }
+    }
     public void exibirStatus() {
         System.out.println("Status: " + status + " (" + progresso + "%)");
     }
