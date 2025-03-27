@@ -18,7 +18,11 @@ public class GerenciadorTarefas {
     public void exibirStatus() {
         System.out.println("Status: " + status + " (" + progresso + "%)");
     }
-
+    public void validarProgresso() {
+        if (progresso > 0 && progresso < 100) {
+            status = "Precisa Revisar";
+        }
+    }
     public int getProgresso() {
         return progresso;
     }
