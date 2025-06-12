@@ -31,7 +31,7 @@ public class ProcessadorPedidos {
 
     private void aplicarDesconto(){
     if (totalPedido > 100){
-	totalPedido *= 0.9
+	totalPedido *= 0.9;
 	}
 }
 
