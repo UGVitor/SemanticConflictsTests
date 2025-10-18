@@ -1,11 +1,14 @@
-// Base.java
+// Left.java
 public class OrderCalculator {
     public double applyDiscount(double total, boolean isVip) {
-        // Base: apenas retorna o total original
+        // Left: aplica 10% de desconto para clientes VIP
+        if (isVip) {
+            total = total * 0.9;
+        }
         return total + calculateShipping(total);
     }
 
     private double calculateShipping(double total) {
-        return 15.0; // frete fixo
+        return 15.0;
     }
 }
