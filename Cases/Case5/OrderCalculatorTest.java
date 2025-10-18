@@ -2,10 +2,11 @@
 public class OrderCalculator {
     public double applyDiscount(double total, boolean isVip) {
 
-        if (isVip) {
-            total = total * 0.9;
+        double shipping = calculateShipping(total);
+        if (total > 100) {
+            shipping = 0.0; // frete grátis
         }
-        return total + calculateShipping(total);
+        return total + shipping;;
     }
 
     private double calculateShipping(double total) {
