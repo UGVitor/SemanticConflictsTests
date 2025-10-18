@@ -1,11 +1,12 @@
-// Left.java
+// Right.java
 public class OrderCalculator {
     public double applyDiscount(double total, boolean isVip) {
-        // Left: aplica 10% de desconto para clientes VIP
-        if (isVip) {
-            total = total * 0.9;
+        // Right: mantém o preço, mas zera o frete se o valor for alto
+        double shipping = calculateShipping(total);
+        if (total > 100) {
+            shipping = 0.0; // frete grátis
         }
-        return total + calculateShipping(total);
+        return total + shipping;
     }
 
     private double calculateShipping(double total) {
